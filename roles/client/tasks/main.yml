@@ -1,0 +1,10 @@
+---
+
+- name: configure apt-cacher-ng proxy
+  when: ansible_distribution == "Ubuntu"
+  template: >
+    src=02aptcachengproxy
+    dest=/etc/apt/apt.conf.d/02aptcachengproxy
+    owner=root
+    group=root
+    mode=0644

@@ -1,0 +1,8 @@
+---
+
+- name: Set clients to use cache.
+  hosts: aptcacheclient 
+  sudo: True
+  roles:
+    - client
+

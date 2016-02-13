@@ -1,10 +1,4 @@
 ---
-- name: (Ubuntu) installing apt-cacher-ng dependencies
-  when: ansible_distribution == "Ubuntu"
-  apt: name={{item}} state=present
-  with_items:
-    - apache2
-  
 - name: (Ubuntu) installing apt-cacher-ng
   when: ansible_distribution == "Ubuntu"
   apt: name={{item}} state=present
@@ -14,7 +8,7 @@
 - name: (Ubuntu) install apt-cacher-ng config
   when: ansible_distribution == "Ubuntu"
   template: >
-    src=etc/apt-cacher-ng/acng.conf.j2
+    src=acng.conf.j2
     dest=/etc/apt-cacher-ng/acng.conf
     owner=root
     group=root

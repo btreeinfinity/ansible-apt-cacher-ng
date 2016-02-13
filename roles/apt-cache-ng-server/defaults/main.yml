@@ -1,0 +1,10 @@
+---
+apt_cacher_ng_port : 9999
+apt_cacher_ng_cachedir : '/var/cache/apt-cacher-ng'
+apt_cacher_ng_logdir : '/var/log/apt-cacher-ng'
+
+mirror_for:
+  ubuntu: True
+  rhel: False
+  arch: False 
+  gentoo: False 
